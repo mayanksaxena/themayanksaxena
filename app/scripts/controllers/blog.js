@@ -8,10 +8,15 @@
  * Controller of the applicationApp
  */
 angular.module('applicationApp')
-  .controller('AboutCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('AboutCtrl', function ($scope, $http) {
+    $scope.blogs = [];
+    $http({ method: 'GET', url: 'http://www.themayanksaxena.com/blogs/list' }).
+    success(function (data, status, headers, config) {
+        console.log("data", data);
+        if(typeof data.blogs !== "undefined")
+            $scope.blogs = data.blogs;
+    }).
+    error(function (data, status, headers, config) {
+        console.log("data", data);
+    });
   });

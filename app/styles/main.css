@@ -39,3 +39,6 @@ div.main {
 
     min-height:100%; /* real browsers */
 }
+.left {
+	float: left;
+}
