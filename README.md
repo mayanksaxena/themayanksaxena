@@ -1,7 +1,6 @@
 # application
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.11.1.
+This is my personal website code created by yo angular generator
 
 ## Build & development
 
