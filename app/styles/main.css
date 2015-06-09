@@ -1,3 +1,41 @@
 .border-right {
-  border-right: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+.user-details figure {
+	width: 130px; 
+	height: 130px; 
+	overflow: hidden; 
+	border-radius: 50%;
+	display: inline-block;
+	margin: 15px 0;
+}
+.user-details p {
+	color: #808080;
+	font-size: 12px;
+	line-height: 18px
+}
+header.lightblue, footer.lightblue {
+	background: none repeat scroll 0 0 rgb(0, 193, 255) !important
+}
+header.royalblue, footer.royalblue {
+	background: none repeat scroll 0% 0% rgb(0, 35, 101) !important;
+}
+header .navbar {
+	background: none repeat scroll 0% 0% transparent;
+}
+header .navbar ul {
+	float: right;
+}
+header .navbar ul li a, .navbar-header a, footer .container .row {
+	color: #fff !important;
+	font-weight: bold !important;
+}
+div.main {
+    position:relative; /* needed for footer positioning*/
+    margin:0 auto; /* center, not in IE5 */
+
+    height:auto !important; /* real browsers */
+    height:100%; /* IE6: treaded as min-height*/
+
+    min-height:100%; /* real browsers */
 }

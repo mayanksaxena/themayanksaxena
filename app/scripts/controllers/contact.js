@@ -9,5 +9,5 @@
  */
 angular.module('applicationApp')
   .controller('ContactController', function ($scope) {
-    $scope.myname = 'mayank.saxena@anktech.co.in';
+    $scope.email = 'mayanksaxena90@gmail.com';
   });
