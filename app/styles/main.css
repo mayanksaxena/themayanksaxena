@@ -42,3 +42,7 @@ div.main {
 .left {
 	float: left;
 }
+.loader-img {
+	left: 25%;
+	position: absolute;
+}
