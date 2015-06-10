@@ -22,4 +22,5 @@ angular.module('applicationApp')
         console.log("data", data);
         $scope.isLoading = false;
     });
+    
   });
