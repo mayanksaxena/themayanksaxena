@@ -56,7 +56,7 @@
 
     <div class="main container">
         <div class="row">
-            <div class="col-sm-4 col-md-3 col-lg-3 border-right">
+            <div class="col-sm-4 col-md-3 col-lg-3 border-right min-win-height">
                 <div class="user-details text-center">
                     <figure>
                         <img class="img-circle" src="images/mayank.jpg" alt="Mayank Saxena">
@@ -64,12 +64,13 @@
                      <p>A Full Stack Software Developer who works for his passion. I am from Jaipur, India.</p>
                 </div>
                 <div class="row">
-                    <div class="col-md-12 hidden-xs hidden-sm">
+                    <div class="col-md-12 hidden-xs ">
                         <div id="chart"></div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-8 col-md-9 col-lg-9">
+            <div class="col-sm-8 col-md-9 col-lg-9 min-win-height">
+                <!-- ng-show="isLoading" -->
                 <img class="loader-img" src="images/loader.gif" ng-show="isLoading">
                 <div ng-view=""></div>
             </div>
@@ -168,6 +169,19 @@
                 exporting: {
                     enabled: false
                 }
+            });
+            function setFooter() {
+                var minHeight = $(window).height() - $("header").innerHeight()-$("footer").innerHeight();
+                console.log("$(window).width()", $(window).width())
+                if($(window).width() >= 768) {
+                    $(".main.container, .min-win-height").attr("style", "min-height: "+minHeight+"px;");
+                } else {
+                    $(".main.container").attr("style", "min-height: "+minHeight+"px;");
+                }
+            }
+            setFooter();
+            $(window).resize(function(){
+                setFooter();
             });
         });
     </script>

@@ -18,7 +18,5 @@ angular.module('applicationApp')
 	$scope.$on('$viewContentLoaded', function(){
 		$scope.isLoading = false;
         //Here your view content is fully loaded !!
-        var minHeight = $(window).height() - $("header").height()-$("footer").height()-20;
-        $(".main").attr("style", "min-height: "+minHeight+"px;");
     });
   });

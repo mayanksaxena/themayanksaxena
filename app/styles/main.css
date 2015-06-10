@@ -39,10 +39,33 @@ div.main {
 
     min-height:100%; /* real browsers */
 }
-.left {
-	float: left;
+.blog-list {
+	margin: 0;
+	padding: 0;
+
+}
+.blog-list li{
+	list-style: none;
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	padding: 12px;
+	width: 100%;
+	max-width: 260px
+
+}
+.blog-list li img{
+	max-width: 100%;
 }
 .loader-img {
-	left: 25%;
+	left: 50%;
+	top: 50%;
 	position: absolute;
+	margin: -32px 0 0 -32px
+}
+.navbar {
+	margin-bottom: 0px;
+}
+.min-win-height{
+	min-height: 64px;
 }
