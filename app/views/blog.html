@@ -1,7 +1,7 @@
 <img class="loader-img" src="images/loader.gif" ng-show="isLoading">
 <ul class="blog-list">
     <li ng-repeat="blog in blogs">
-        <img src="{{blog.image}}"  class="img-thumbnail">
+        <a href="/blog/{{blog.title}}"><img src="{{blog.image}}"  class="img-thumbnail"></a>
         <a href="/blog/{{blog.title}}"><h3>{{blog.title}}</h3></a>
     </li>
 </ul>
